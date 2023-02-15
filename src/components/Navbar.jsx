@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo1.png";
+import Logo from "../assets/hlogo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Socials from "./Socials";
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
-        <img src={Logo} alt="Logo" style={{ width: "50px" }} />
+        <img src={Logo} alt="Logo" style={{ width: "155px", marginLeft: "-10px" }} />
       </div>
 
       {/* Menu */}
