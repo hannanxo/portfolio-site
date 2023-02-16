@@ -1,12 +1,12 @@
 import React from "react";
-import HTML from "../assets/html.png";
-import CSS from "../assets/css.png";
-import JavaScript from "../assets/javascript.png";
-import ReactImg from "../assets/react.png";
-import Node from "../assets/node.png";
-import GitHub from "../assets/github.png";
-import AWS from "../assets/aws.png";
-import Mongo from "../assets/mongo.png";
+import HTML from "../assets/icons/html.png";
+import CSS from "../assets/icons/css.png";
+import JavaScript from "../assets/icons/javascript.png";
+import ReactImg from "../assets/icons/react.png";
+import Node from "../assets/icons/node.png";
+import GitHub from "../assets/icons/github.png";
+import AWS from "../assets/icons/aws.png";
+import Mongo from "../assets/icons/mongo.png";
 const Skills = () => {
   return (
     <div name="skills" className="w-full h-screen bg-[#0a192f] text-gray-300">
