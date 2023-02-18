@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 @layer base {
   body {
@@ -22,15 +21,12 @@
 }
 
 .content-div:hover {
-  background-image: linear-gradient(to right, rgba(112, 157, 255, 0.8), hsla(242, 74%, 61%, 0.8)) !important;
-}
-.content-div {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 250px;
+  background-image: linear-gradient(to right, rgba(255, 70, 86, 0.686), rgba(162, 10, 23, 0.752)) !important;
 }
 
-.content-div:hover {
-  background-image: linear-gradient(to right, rgba(112, 157, 255, 0.8), hsla(242, 74%, 61%, 0.8)) !important;
+.icon {
+  color: #ff4655;
+}
+.icon:hover {
+  color: #0f1923;
 }
