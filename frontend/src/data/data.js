@@ -19,17 +19,17 @@ export const data = [
     live: "",
   },
   {
-    id: 1,
+    id: 3,
     name: "Docker",
     Image: DOCKER,
     github: "https://github.com/hannanxo/docker-tuts",
     live: "",
   },
-  {
-    id: 1,
-    name: "Chatbot",
-    Image: CHATBOT,
-    github: "https://github.com/hassamboi/chatbot",
-    live: "",
-  },
+  // {
+  //   id: 4,
+  //   name: "Chatbot",
+  //   Image: CHATBOT,
+  //   github: "https://github.com/hassamboi/chatbot",
+  //   live: "",
+  // },
 ];
