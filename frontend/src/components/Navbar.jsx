@@ -21,6 +21,7 @@ const Navbar = () => {
         <li>Skills</li>
         <li>Work</li>
         <li>Contact</li>
+        <li>Blogs</li>
       </ul>
 
       {/* Hamburger */}
@@ -35,6 +36,7 @@ const Navbar = () => {
         <li className="py-6 text-4xl hover:text-[#ff4655]">Skills</li>
         <li className="py-6 text-4xl hover:text-[#ff4655]">Work</li>
         <li className="py-6 text-4xl hover:text-[#ff4655]">Contact</li>
+        <li className="py-6 text-4xl hover:text-[#ff4655]">Blogs</li>
       </ul>
 
       {/* Socials */}
