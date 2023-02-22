@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler");
 const Blog = require("../models/blogModel");
 // blog will have a bunch of mongoose methods to create/read in db
 
-// @desc Get blogs
+// @desc   Get blogs
 // @route  GET /api/blogs
 // @access Private
 const getBlogs = asyncHandler(async (req, res) => {
@@ -12,7 +12,7 @@ const getBlogs = asyncHandler(async (req, res) => {
   res.status(200).json(blogs);
 });
 
-// @desc Set blogs
+// @desc   Set blogs
 // @route  POST /api/blogs
 // @access Private
 const setBlog = asyncHandler(async (req, res) => {
@@ -29,18 +29,35 @@ const setBlog = asyncHandler(async (req, res) => {
   res.status(200).json(blog);
 });
 
-// @desc Update blogs
+// @desc   Update blogs
 // @route  PUT /api/blogs/:id
 // @access Private
 const updateBlog = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: `Update blog ${req.params.id}` });
+  const blog = await Blog.findById(req.params.id);
+
+  if (!blog) {
+    res.status(400);
+    throw new Error("Goal not found");
+  }
+
+  const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.status(200).json(updatedBlog);
 });
 
-// @desc Delete blogs
+// @desc   Delete blogs
 // @route  DELETE /api/blogs/:id
 // @access Private
 const deleteBlog = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: `Delete blog ${req.params.id}` });
+  const blog = await Blog.findById(req.params.id);
+
+  if (!blog) {
+    res.status(400);
+    throw new Error("Blog not found");
+  }
+
+  await blog.remove();
+
+  res.status(200).json({ id: req.params.id });
 });
 
 module.exports = {
