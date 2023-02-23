@@ -39,6 +39,7 @@ const updateBlog = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("Goal not found");
   }
+  // Might need to add some code here for admin power
 
   const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.status(200).json(updatedBlog);
@@ -54,6 +55,7 @@ const deleteBlog = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("Blog not found");
   }
+  // Might need to add some code here for admin power
 
   await blog.remove();
 
