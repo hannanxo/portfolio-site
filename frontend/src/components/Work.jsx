@@ -6,9 +6,9 @@ const Work = () => {
   return (
     <div name="work" className="w-full md:h-screen text-gray-300 bg-[#ece8e1]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
+        <div className="md:pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-[#0f1923] border-[#ff4655] leading-normal">Work</p>
-          <p className="py-6 text-[#768079]">Check out some of my recent work</p>
+          <p className="py-6 md:text-[#768079] text-[#0f1923] font-bold md:font-normal ">Check out some of my recent work</p>
         </div>
 
         {/* container for projects */}

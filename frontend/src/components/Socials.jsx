@@ -9,12 +9,12 @@ const Socials = () => {
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>
           <li className="h-[60px] flex justify-between items-center duration-300">
-            <a className="flex justify-between items-center w-full text-gray-300 icon" href="/">
+            <a className="flex justify-between items-center w-full text-gray-300 icon" href="https://pk.linkedin.com/in/abdul-hannan-a8b538215">
               <FaLinkedin size={30} />
             </a>
           </li>
           <li className="h-[60px] flex justify-between items-center duration-300 ">
-            <a className="flex justify-between items-center w-full text-gray-300 icon" href="/">
+            <a className="flex justify-between items-center w-full text-gray-300 icon" href="https://github.com/hannanxo">
               <FaGithub size={30} />
             </a>
           </li>
