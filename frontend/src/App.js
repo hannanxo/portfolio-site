@@ -1,31 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Work from "./components/Work";
-import Contact from "./components/Contact";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Blogs from "./pages/Blogs";
+import SingleView from "./components/SingleView";
+import { useState } from "react";
+import { useEffect } from "react";
 function App() {
+  const [sView, setsView] = useState(true);
+  console.log(window.location.href);
+  useEffect(() => {
+    if (window.location.href != "http://localhost:3000/") {
+      setsView(false);
+    }
+  });
   return (
     <>
       <Navbar />
-      {/* <Home />
-      <About />
-      <Skills />
-      <Work />
-      <Contact /> */}
+      {sView && <SingleView />}
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
