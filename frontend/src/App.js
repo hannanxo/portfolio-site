@@ -4,22 +4,16 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import SingleView from "./components/SingleView";
-import { useState } from "react";
-import { useEffect } from "react";
+
 function App() {
-  const [sView, setsView] = useState(true);
-  console.log(window.location.href);
-  useEffect(() => {
-    if (window.location.href != "http://localhost:3000/") {
-      setsView(false);
-    }
-  });
   return (
     <>
-      <Navbar />
-      {sView && <SingleView />}
+      {/* <SingleView /> */}
+      {/* {sView && <SingleView />} */}
       <Router>
+        <Navbar />
         <Routes>
+          <Route path="/" element={<SingleView />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />

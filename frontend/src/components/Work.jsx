@@ -4,7 +4,7 @@ import { data } from "../data/data.js";
 const Work = () => {
   const project = data;
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#ece8e1]">
+    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#e1e1e1]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="md:pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-[#0f1923] border-[#ff4655] leading-normal">Work</p>
