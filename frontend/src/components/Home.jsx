@@ -2,8 +2,6 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Socials from "./Socials";
 const Home = () => {
-  // const navigate = useNavigate();
-  // const handleGoToWork = () => navigate("/work");
   return (
     <div name="home" className="w-full h-screen bg-[#e1e1e1]">
       {/* Container */}
