@@ -12,7 +12,7 @@ function SingleView() {
       <About />
       <Skills />
       <Work />
-      <Blogs />
+      {/* <Blogs /> */}
       <Contact />
     </>
   );

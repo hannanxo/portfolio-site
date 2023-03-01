@@ -1,7 +1,7 @@
 import CHATBOT from "../assets/projects/chatbot.png";
 import AI from "../assets/projects/AI.jpg";
 import NLP from "../assets/projects/nlp.jpg";
-import DOCKER from "../assets/projects/docker.png";
+import DOCKER from "../assets/projects/docker.jpg";
 
 export const data = [
   {
@@ -25,11 +25,11 @@ export const data = [
     github: "https://github.com/hannanxo/docker-tuts",
     live: "",
   },
-  // {
-  //   id: 4,
-  //   name: "Chatbot",
-  //   Image: CHATBOT,
-  //   github: "https://github.com/hassamboi/chatbot",
-  //   live: "",
-  // },
+  {
+    id: 4,
+    name: "Chatbot",
+    Image: CHATBOT,
+    github: "https://github.com/hassamboi/chatbot",
+    live: "",
+  },
 ];
