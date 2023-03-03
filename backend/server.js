@@ -17,6 +17,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/blogs", require("./routes/blogRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
+app.use("*", (req, res) => {
+  res.status(404).json({ message: "Not found" });
+});
 
 app.use(errorHandler); //will override express's default error handler (HTML)
 
