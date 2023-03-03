@@ -15,7 +15,7 @@ export const data = [
   {
     id: 2,
     name: "Artificial Intelligence",
-    desc: "Famous AI alogrithms and problems implemented in python",
+    desc: "Famous AI algorithms and problems implemented in python",
     Image: AI,
     github: "https://tinyurl.com/2s3myjpn",
     live: "",
