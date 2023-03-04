@@ -9,10 +9,10 @@ import AWS from "../assets/icons/aws.png";
 import Mongo from "../assets/icons/mongo.png";
 const Skills = () => {
   return (
-    <div name="skills" className="w-full h-screen bg-[#ececec]">
+    <div name="skills" className="w-full h-screen bg-[#e1e1e1] pt-[120px] md:py-0">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="md:mt-0 mt-20">
+        <div className="">
           <p className="text-4xl font-bold inline border-b-4 border-[#ff4655] leading-normal">Skills</p>
           <p className="py-4 text-[#768079]">Following is the tech stack I've worked with</p>
         </div>

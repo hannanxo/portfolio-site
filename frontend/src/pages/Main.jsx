@@ -13,7 +13,7 @@ function Main() {
       <About />
       <Skills />
       <Work />
-      {/* <Blogs/> */}
+      <Blogs />
       <Contact />
     </>
   );

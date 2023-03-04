@@ -4,17 +4,17 @@ import { data } from "../data/data.js";
 const Work = () => {
   const project = data;
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#e1e1e1]">
+    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#ececec] py-[84px] md:py-0">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="md:mt-[55px] mt-[65px]">
+        <div className="">
           <p className="text-4xl font-bold inline border-b-4 text-[#0f1923] border-[#ff4655] leading-normal">Work</p>
-          <p className="py-6 text-[#768079]">Check out some of my recent work</p>
+          <p className="pt-6  text-[#768079]">Check out some of my recent work</p>
         </div>
 
         <div className="mt-4">
-          <ul className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-2s">
             {project.map((item, index) => (
-              <li key={index} className="group relative flex flex-col items-start py-3 hover:scale-110 duration-500">
+              <li key={index} className="group relative flex flex-col items-start py-3 ">
                 <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
                   <img src={item.Image} alt="x" width="900" height="900" decoding="async" className="h-8 w-7" loading="lazy" />
                 </div>

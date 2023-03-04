@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import Socials from "./Socials";
 const Home = () => {
   return (
-    <div name="home" className="w-full h-screen bg-[#ececec]">
+    <div name="home" className="w-full h-screen bg-[#e1e1e1]">
       {/* Container */}
       <div className="max-w-[1000px] sm:mx-auto mx-8 sm:px-8 flex flex-col justify-center h-full">
         <p className="leading-normal text-[#ff4655]">Hi, my name is</p>
