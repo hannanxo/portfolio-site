@@ -40,12 +40,18 @@ const MobileNavbar = ({ pathname }) => {
             </div>
           ) : (
             <a href="/login" className="px-4">
-              <FaSignInAlt />
+              {pathname != "/" ? (
+                <></>
+              ) : (
+                <>
+                  <FaSignInAlt />
+                </>
+              )}
             </a>
           )}
 
           <div onClick={handleClick} className="md:hidden z-10 px-4">
-            {pathname != "/" ? <></> : <>{!nav ? <FaBars /> : <FaTimes />}</>}
+            {pathname != "/" ? null : <>{!nav ? <FaBars /> : <FaTimes />}</>}
           </div>
         </div>
 

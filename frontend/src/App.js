@@ -7,8 +7,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Main from "./pages/Main";
 import Blog from "./pages/Blog";
+import { useSelector } from "react-redux";
 
 function App() {
+  const { user } = useSelector(state => state.auth);
   return (
     <>
       <Router>
@@ -18,6 +20,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/blogs" element={<Blog />} />
+          {/* {user ? <Route path="/blogs" element={<Blog />} /> : <Route path="/" element={<Main />} />} */}
+
           {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         </Routes>
       </Router>

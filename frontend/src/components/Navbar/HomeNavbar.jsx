@@ -78,9 +78,7 @@ const HomeNavbar = ({ pathname }) => {
                       Logout
                     </button>
                   </li>
-                ) : (
-                  <></>
-                )}
+                ) : null}
               </div>
             </ul>
           </>
