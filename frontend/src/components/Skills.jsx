@@ -9,7 +9,7 @@ import AWS from "../assets/icons/aws.png";
 import Mongo from "../assets/icons/mongo.png";
 const Skills = () => {
   return (
-    <div name="skills" className="w-full h-screen bg-[#e1e1e1] pt-[120px] md:py-0">
+    <div name="skills" className="w-full h-screen bg-[#fafafa] pt-[120px] md:py-0">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="">

@@ -27,7 +27,7 @@ const Work = () => {
                       fill="currentColor"
                     ></path>
                   </svg>
-                  <a className="ml-2" href={item.github}>
+                  <a className="ml-2 group-hover:text-teal-500" href={item.github}>
                     {item.github}
                   </a>
                 </p>

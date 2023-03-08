@@ -1,9 +1,24 @@
 import React from "react";
 import Logo from "../../assets/icons/Hannan.png";
+import { FaSignOutAlt, FaSignInAlt } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 import * as Scroll from "react-scroll";
+import { useSelector, useDispatch } from "react-redux";
+import { logout, reset } from "../features/auth/authSlice";
 
 const HomeNavbar = ({ pathname }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { user } = useSelector(state => state.auth);
+
+  const onLogout = () => {
+    dispatch(logout());
+    dispatch(reset());
+    navigate("/");
+  };
+
   let scroll = Scroll.animateScroll;
   return (
     <>
@@ -39,11 +54,15 @@ const HomeNavbar = ({ pathname }) => {
                   Contact
                 </Link>
               </li>
-              <li>
-                <a href="/login" className="text-[#0f1923] border-1 border-[#ff4655] rounded-lg bg-[#ff4655] px-5 flex items-center hover:text-[#f9f9f9]">
-                  Sign In
+              {user ? (
+                <div onClick={onLogout} className="px-5 py-1 hover:cursor-pointer">
+                  <FaSignOutAlt />
+                </div>
+              ) : (
+                <a href="/login" className="px-5 py-1">
+                  <FaSignInAlt />
                 </a>
-              </li>
+              )}
             </ul>
           </>
         ) : (
@@ -52,20 +71,17 @@ const HomeNavbar = ({ pathname }) => {
               <img src={Logo} alt="Logo" style={{ width: "155px", marginLeft: "-10px" }} />
             </a>
             <ul className="hidden md:flex">
-              <li className="hidden md:flex">
-                <a href="/blogs">Blogs</a>
-              </li>
-              <li>
-                {pathname === "/register" ? (
-                  <a href="/register" className="text-[#0f1923] border-1 border-[#ff4655] rounded-lg bg-[#ff4655] px-5 flex items-center hover:text-[#f9f9f9]">
-                    Login
-                  </a>
+              <div className="hidden md:flex">
+                {user ? (
+                  <li>
+                    <button onClick={onLogout} className="text-[#0f1923] border-1 border-[#ff4655] rounded-lg bg-[#ff4655] px-5 flex items-center hover:text-[#f9f9f9]">
+                      Logout
+                    </button>
+                  </li>
                 ) : (
-                  <a href="/login" className="text-[#0f1923] border-1 border-[#ff4655] rounded-lg bg-[#ff4655] px-5 flex items-center hover:text-[#f9f9f9]">
-                    Register
-                  </a>
+                  <></>
                 )}
-              </li>
+              </div>
             </ul>
           </>
         )}
