@@ -25,7 +25,7 @@ const Login = () => {
     }
 
     if (isSuccess || user) {
-      navigate("/blogs");
+      navigate("/");
     }
 
     dispatch(reset());
@@ -64,9 +64,14 @@ const Login = () => {
           <input className="my-2 p-2 bg-[#e1e1e1] rounded-lg" type="password" placeholder="Enter your password" id="password" name="password" value={password} onChange={onChange} />
 
           <button className="text-white border-2 border-[#ff4655] bg-[#ff4655] hover:bg-[#0f1923] hover:border-[#0f1923] px-4 py-3 my-8 mx-auto rounded-lg">Login</button>
-          <a href="/register" className="text-[#768079]">
+          <div
+            onClick={() => {
+              navigate("/register");
+            }}
+            className="text-[#768079]"
+          >
             Not a user? <span className="text-[#ff4655] underline text-xs">Click here</span>
-          </a>
+          </div>
         </form>
       </div>
     </>

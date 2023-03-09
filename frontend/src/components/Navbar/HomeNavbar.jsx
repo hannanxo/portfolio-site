@@ -59,17 +59,26 @@ const HomeNavbar = ({ pathname }) => {
                   <FaSignOutAlt />
                 </div>
               ) : (
-                <a href="/login" className="px-5 py-1">
+                <div
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                  className="px-5 py-1"
+                >
                   <FaSignInAlt />
-                </a>
+                </div>
               )}
             </ul>
           </>
         ) : (
           <>
-            <a href="/">
+            <div
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               <img src={Logo} alt="Logo" style={{ width: "155px", marginLeft: "-10px" }} />
-            </a>
+            </div>
             <ul className="hidden md:flex">
               <div className="hidden md:flex">
                 {user ? (

@@ -6,7 +6,7 @@ const Blog = require("../models/blogModel");
 
 // @desc   Get blogs
 // @route  GET /api/blogs
-// @access Private
+// @access Public
 const getBlogs = asyncHandler(async (req, res) => {
   const blogs = await Blog.find();
   res.status(200).json(blogs);

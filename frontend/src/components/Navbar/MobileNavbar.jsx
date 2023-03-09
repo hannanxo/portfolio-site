@@ -5,6 +5,7 @@ import Logo from "../../assets/icons/Hannan.png";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../features/auth/authSlice";
+import * as Scroll from "react-scroll";
 
 const MobileNavbar = ({ pathname }) => {
   const navigate = useNavigate();
@@ -25,13 +26,24 @@ const MobileNavbar = ({ pathname }) => {
   const clearView = () => {
     setNav(!nav);
   };
+  let scroll = Scroll.animateScroll;
 
   return (
     <>
       <div className="md:hidden fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#111] text-[#f9f9f9] z-10">
-        <a href="/">
-          <img src={Logo} alt="Logo" style={{ width: "155px", marginLeft: "-10px" }} />
-        </a>
+        {pathname === "/" ? (
+          <div onClick={scroll.scrollToTop}>
+            <img src={Logo} alt="Logo" style={{ width: "155px", marginLeft: "-10px" }} />
+          </div>
+        ) : (
+          <div
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <img src={Logo} alt="Logo" style={{ width: "155px", marginLeft: "-10px" }} />
+          </div>
+        )}
 
         <div className="flex">
           {user ? (
@@ -39,19 +51,24 @@ const MobileNavbar = ({ pathname }) => {
               <FaSignOutAlt />
             </div>
           ) : (
-            <a href="/login" className="px-4">
-              {pathname != "/" ? (
+            <div
+              onClick={() => {
+                navigate("/login");
+              }}
+              className="px-4"
+            >
+              {pathname !== "/" ? (
                 <></>
               ) : (
                 <>
                   <FaSignInAlt />
                 </>
               )}
-            </a>
+            </div>
           )}
 
           <div onClick={handleClick} className="md:hidden z-10 px-4">
-            {pathname != "/" ? null : <>{!nav ? <FaBars /> : <FaTimes />}</>}
+            {pathname !== "/" ? null : <>{!nav ? <FaBars /> : <FaTimes />}</>}
           </div>
         </div>
 
