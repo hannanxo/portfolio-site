@@ -50,5 +50,5 @@
   border: 8px solid;
   border-color: #ff4655 transparent #1111 transparent;
   border-radius: 50%;
-  animation: spin 1.2s linear infinite;
+  animation: spin 0.5s linear infinite;
 }

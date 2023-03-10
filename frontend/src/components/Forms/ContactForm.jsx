@@ -1,4 +1,5 @@
 import React from "react";
+
 const Contact = () => {
   return (
     <div name="contact" className="w-full h-screen bg-[#ececec] flex justify-center items-center p-4">
@@ -10,7 +11,9 @@ const Contact = () => {
         <input className="bg-[#e1e1e1] p-2 rounded-lg" type="text" placeholder="Name" name="name" />
         <input className="my-4 p-2 bg-[#e1e1e1] rounded-lg" type="email" placeholder="Email" name="email" />
         <textarea className="bg-[#e1e1e1] p-2 rounded-lg" name="message" rows="10" placeholder="Message"></textarea>
-        <button className="text-white border-2 border-[#ff4655] bg-[#ff4655] hover:bg-[#0f1923] hover:border-[#0f1923] px-4 py-3 my-8 mx-auto rounded-lg">Let's Chat</button>
+        <button onClick={e => e.target.reset()} className="text-white border-2 border-[#ff4655] bg-[#ff4655] hover:bg-[#0f1923] hover:border-[#0f1923] px-4 py-3 my-8 mx-auto rounded-lg">
+          Let's Chat
+        </button>
       </form>
     </div>
   );

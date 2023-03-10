@@ -25,6 +25,7 @@ const setBlog = asyncHandler(async (req, res) => {
     title: req.body.title,
     content: req.body.content,
     date: req.body.date,
+    link: req.body.link,
   });
   res.status(200).json(blog);
 });

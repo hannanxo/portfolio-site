@@ -3,6 +3,7 @@ import RenderProject from "./RenderProject";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom/dist";
 import { getProjects, reset } from "../features/projects/projectSlice";
+import Spinner from "../Spinner";
 
 const ProjectSection = () => {
   const navigate = useNavigate();
@@ -20,6 +21,10 @@ const ProjectSection = () => {
       dispatch(reset());
     };
   }, [isError, message, dispatch]);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <div name="work" className="w-full md:h-screen text-gray-300 bg-[#ececec] py-[84px] md:py-0">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">

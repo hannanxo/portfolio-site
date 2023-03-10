@@ -24,9 +24,9 @@ const BlogSection = () => {
     };
   }, [isError, message, dispatch]);
 
-  // if (isLoading) {
-  //   return <Spinner />;
-  // }
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <div name="blogs" className="sm:px-8  bg-[#fafafa] py-[100px] md:py-[100px]">
       <div className="mx-auto max-w-7xl lg:px-8">
