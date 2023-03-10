@@ -15,13 +15,13 @@ const getProject = asyncHandler(async (req, res) => {
 // @access Private
 
 const setProject = asyncHandler(async (req, res) => {
-  if (!req.body.content) {
+  if (!req.body.desc) {
     res.status(400);
     throw new Error("Please add necessary project fields");
   }
   const project = await Project.create({
     name: req.body.name,
-    desc: req.body.name,
+    desc: req.body.desc,
     image: req.body.image,
     github: req.body.github,
   });

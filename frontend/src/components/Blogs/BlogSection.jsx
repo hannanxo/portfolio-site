@@ -12,9 +12,8 @@ const BlogSection = () => {
 
   const { user } = useSelector(state => state.auth);
   const { blogs, isLoading, isError, message } = useSelector(state => state.blogs);
-  // console.log(blogs);
+
   useEffect(() => {
-    // console.log("1st");
     if (isError) {
       console.log(message);
     }
@@ -24,7 +23,6 @@ const BlogSection = () => {
       dispatch(reset());
     };
   }, [isError, message, dispatch]);
-  // might need to set dismount
 
   // if (isLoading) {
   //   return <Spinner />;

@@ -3,9 +3,9 @@ import About from "../components/About";
 import Contact from "../components/Forms/ContactForm";
 import Home from "../components/Home";
 import Skills from "../components/Skills";
-import Project from "../components/Projects";
 import BlogSection from "../components/Blogs/BlogSection";
 import { useEffect } from "react";
+import ProjectSection from "../components/Projects/ProjectSection";
 
 function Main() {
   useEffect(() => {
@@ -16,7 +16,7 @@ function Main() {
       <Home />
       <About />
       <Skills />
-      <Project />
+      <ProjectSection />
       <BlogSection />
       <Contact />
     </>

@@ -41,7 +41,7 @@ const HomeNavbar = ({ pathname }) => {
               </li>
               <li>
                 <Link to="work" smooth={true} duration={500}>
-                  Work
+                  Projects
                 </Link>
               </li>
               <li>

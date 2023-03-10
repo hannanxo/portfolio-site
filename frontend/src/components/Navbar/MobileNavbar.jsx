@@ -85,7 +85,7 @@ const MobileNavbar = ({ pathname }) => {
           </li>
           <li className="py-6 text-4xl hover:text-[#ff4655]">
             <Link to="work" smooth={true} duration={500} onClick={clearView}>
-              Work
+              Projects
             </Link>
           </li>
           <li className="py-6 text-4xl hover:text-[#ff4655]">
